@@ -1,31 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Kristi');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+//font-family: 'Poiret One', cursive;
+@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+//font-family: 'Vidaloka', serif;
+@import url('https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise');
+//font-family: 'Waiting for the Sunrise', cursive;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+//font-family: 'Lato', sans-serif;
 @import "ember-bootstrap/bootstrap";
-
+ 
+$pink: #efe3e5;
+$pinkamp : #d8bdbd;
+$blueamp: #b8d0cc;
+$blue: #d1e2df;
+$greyfont: #353535;
+ 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    color: #353535;
+    color: $greyfont;
 }
-
+ 
+.test-sub {
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size: 1.6rem;
+    padding-bottom:3rem;
+}
+ 
 .app {
     &-container {
         padding: 3rem 3rem;
     }
     &-navbar {
-        padding: .2rem;
-        background-color: #efe3e5;
+        padding: .5rem;
+        background-color: $pink;
+        font-family: 'Lato', sans-serif;
         font-size: .8rem;
         font-weight:300;
-        a {
-            padding: 1.7rem;
-            color: #353535;
+        .social-link {
+            padding-right: 1.2rem;
+            color: $greyfont;
         }
-        a:hover {
+        .navbar-link {
+            padding: 0 1.7rem;
+            color: #353535;
+            font-weight: 400;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+        .navbar-link:hover, .social-link:hover {
             transition: .1s ease;
-            color: #bba2a2;
+            color: #a97575;
             text-decoration:none;
         }
     }
+ 
     &-header {
         text-align:center;
         padding-bottom:4rem;
@@ -33,7 +62,7 @@ body {
             font-size: 4.1rem;
             text-transform: uppercase;
             font-weight: 300;
-            padding-top: 1.5rem;
+            padding-top: 1rem;
             line-height: 100%;
         }
         &--subtitle {
@@ -43,13 +72,18 @@ body {
             margin: 0 2rem;
             padding-bottom: 2rem;
         }
+        &--ampersand {
+            font-family: 'Vidaloka', serif;
+            font-size: 6.5rem;
+            color: $pinkamp;
+        }
         &--image {
             border-radius:50%;
             width:100%;
         }
     }
 }
-
+ 
 
 .blog {
     padding: 2rem 0;
@@ -60,7 +94,7 @@ body {
         padding:2px;
     }
 }
-
+ 
 .overlay {
     position: absolute;
     top: 0;
@@ -79,4 +113,3 @@ body {
     position:absolute;
     opacity:.4;
 }
-
