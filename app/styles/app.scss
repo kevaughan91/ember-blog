@@ -12,9 +12,15 @@
  
 $pink: #efe3e5;
 $pinkamp : #d8bdbd;
+$pinkhover: #a97575;
 $blueamp: #b8d0cc;
 $blue: #d1e2df;
 $greyfont: #353535;
+$teal: #dfece9;
+$tealamp: #bad8cf;
+$tealhover: #7fa299;
+
+/*#e6d4d5;*/
  
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -33,7 +39,9 @@ body {
     }
     &-navbar {
         padding: .5rem;
-        background-color: $pink;
+        background-color: $teal;
+       /* border-top: 3px solid $teal;
+        border-bottom: 3px solid $teal; */
         font-family: 'Lato', sans-serif;
         font-size: .8rem;
         font-weight:300;
@@ -50,7 +58,7 @@ body {
         }
         .navbar-link:hover, .social-link:hover {
             transition: .1s ease;
-            color: #a97575;
+            color: $tealhover;
             text-decoration:none;
         }
     }
@@ -75,7 +83,7 @@ body {
         &--ampersand {
             font-family: 'Vidaloka', serif;
             font-size: 6.5rem;
-            color: $pinkamp;
+            color: $tealamp ;
         }
         &--image {
             border-radius:50%;
@@ -112,4 +120,62 @@ body {
 .overlay:hover {
     position:absolute;
     opacity:.4;
+}
+
+.post {
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 30px;
+    margin-right: 30px;
+    &--title {
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.9rem;
+        line-height: 1;
+        font-weight: 300;
+        padding: 20px 0 8px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    &--feed {
+        padding:2px;
+    }
+    &--feed-image {
+        width:100%;
+    }
+    &--content {
+        padding: 15px;
+        color: #383838;
+        font-weight: 300;
+        text-align: justify;
+        font-size: 1rem;
+        img {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            /*padding: 0 8%;*/
+        }
+    }
+    &--subtitle {
+        text-transform:uppercase;
+        font-size: 1.12rem;
+        color: #a6c5bc;
+        font-weight:500;
+    }
+    &--line-heading { 
+        width: 80%;
+        text-align: center;
+        font-size: .75rem;
+        font-weight: 300;
+        border-bottom: 1px solid #bfbfbf;
+        line-height: 0.01em;
+        margin: 10px 10% 20px 10%;
+    } 
+    &--line-heading span { 
+        background: #fff;
+        position: relative;
+        top: 2px;
+        padding: 0 10px;
+        text-transform: uppercase;
+    }
 }
