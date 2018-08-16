@@ -12,6 +12,11 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
+    },
+    outputPaths: {
+      app: {
+        html: 'index.html'
+      }
     }
   });
 
