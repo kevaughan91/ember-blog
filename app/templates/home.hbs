@@ -3,9 +3,9 @@
     <div class="row">
         {{#each model as |post|}}
             <div class="col-md-3 blog-post">
-                {{#link-to "post" post.post_id}}
+                {{#link-to "post" post.id}}
                     <div class="overlay"></div>
-                    <img class="blog-image" src="/assets/images/post{{post.post_id}}.jpg">
+                    <img class="blog-image" src="/assets/images/{{post.coverphoto}}.jpg">
                 {{/link-to}}
             </div>
         {{/each}}
