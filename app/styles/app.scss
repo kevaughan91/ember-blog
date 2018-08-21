@@ -184,3 +184,22 @@ body {
         text-transform: uppercase;
     }
 }
+
+.fashion {
+    &--title {
+        font-size: 2em;
+        font-weight: 300;
+        text-align: center;
+    }
+    &--subtitle {
+        text-align: center;
+        font-weight: 400;
+    }
+    &--image {
+        padding: 5px;
+        height: 350px;
+        &:hover {
+            opacity:.4;
+        }
+    }
+}

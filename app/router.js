@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('post', { path: '/view/:id' })
   this.route('about');
   this.route('contact');
+  this.route('fashion', function() {
+    this.route('view', { path: '/:id' });
+  });
 });
 
 export default Router;
