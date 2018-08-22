@@ -26,16 +26,26 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     color: $greyfont;
 }
- 
-.test-sub {
-    font-family: 'Waiting for the Sunrise', cursive;
-    font-size: 1.6rem;
-    padding-bottom:3rem;
+
+.show-in-mobile {
+    display:none !important;
+    @media (max-width: 600px) {
+        display:inline-block !important;
+    }
+}
+
+.hide-in-mobile {
+    @media (max-width: 600px) {
+        display:none !important;
+    }
 }
  
 .app {
     &-container {
         padding: 3rem 3rem;
+        @media (max-width: 600px) {
+            padding: 1rem;
+        }
     }
     &-navbar {
         padding: .5rem;
@@ -55,6 +65,11 @@ body {
             font-weight: 400;
             font-size: 11px;
             letter-spacing: 2px;
+            &.menu {
+                padding:0 .3rem;
+                font-size:.7rem;
+                font-weight:400;
+            }
         }
         .navbar-link:hover, .social-link:hover {
             transition: .1s ease;
@@ -72,18 +87,25 @@ body {
             font-weight: 300;
             padding-top: 1rem;
             line-height: 100%;
+            @media (max-width: 600px) {
+                font-size: 2.3rem;
+            }
         }
         &--subtitle {
-            font-family: 'Kristi', cursive;
-            font-size: 2rem;
-            border-bottom: 1px solid #ddd;
-            margin: 0 2rem;
-            padding-bottom: 2rem;
+            font-family: 'Waiting for the Sunrise', cursive;
+            font-size: 1.6rem;
+            padding-bottom:3rem;
+            @media (max-width: 600px) {
+                font-size: 1.1rem;
+            }
         }
         &--ampersand {
             font-family: 'Vidaloka', serif;
             font-size: 6.5rem;
             color: $tealamp ;
+            @media (max-width:600px){
+                font-size: 4.1rem;
+            }
         }
         &--image {
             border-radius:50%;
