@@ -27,6 +27,9 @@ body {
     color: $greyfont;
 }
 
+.center {
+    text-align:center;
+}
 .show-in-mobile {
     display:none !important;
     @media (max-width: 600px) {
@@ -38,6 +41,18 @@ body {
     @media (max-width: 600px) {
         display:none !important;
     }
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
 }
  
 .app {
@@ -60,7 +75,7 @@ body {
             color: $greyfont;
         }
         .navbar-link {
-            padding: 0 1.7rem;
+            padding: 0 1.7rem !important;
             color: #353535;
             font-weight: 400;
             font-size: 11px;
@@ -73,7 +88,7 @@ body {
         }
         .navbar-link:hover, .social-link:hover {
             transition: .1s ease;
-            color: $tealhover;
+            color: $tealhover !important;
             text-decoration:none;
         }
     }
@@ -237,5 +252,21 @@ body {
     }
     &-link {
         width: 100%;
+    }
+}
+
+.about {
+    p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    &--image {
+        padding: 0 15px;
+        width: 300px;
+        border-radius: 50%;
+    }
+    &--image-container {
+        padding-top: 12px;
+        padding-bottom: 30px;
     }
 }

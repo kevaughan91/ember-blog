@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('fashion', function() {
     this.route('view', { path: '/:id' });
   });
+  this.route('decor');
 });
 
 export default Router;

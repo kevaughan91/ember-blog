@@ -7,24 +7,36 @@
         </div>
         <div class="app-header--title">Kelly Rainwater</div>
         <div class="app-header--subtitle">A Life + Style Blog</div> -->
-        <div class="app-header--title">trend<span class="app-header--ampersand">&</span>tonic</div>
+        <div class="app-header--title">trend
+            <span class="app-header--ampersand">&</span>tonic</div>
         <div class="app-header--subtitle">A Life + Style Blog by Kelly Rainwater</div>
-        <div class="app-navbar">
-            <i class="fas fa-bars show-in-mobile"></i>
-            <a class="navbar-link menu show-in-mobile">MENU</a>
-            <a class="navbar-link hide-in-mobile" href="/home">HOME</a>
-            <a class="navbar-link hide-in-mobile" href="/about">ABOUT</a>
-            <a class="navbar-link hide-in-mobile" href="/fashion">FASHION</a>
-            <a class="navbar-link hide-in-mobile" href="">DECOR</a>
-            <a class="navbar-link hide-in-mobile" href="/contact">SAY HELLO!</a>
-            <span class="social-links-container">
-                <a class="social-link" href="mailto:kvaughan584@gmail.com"><i class="far fa-envelope"></i></a>
-                <a class="social-link" href="https://www.facebook.com/kellyvaughan91"><i class="fab fa-facebook-f"></i></a>
-                <a class="social-link" href="https://www.instagram.com/kelly.rainwater/?hl=en"><i class="fab fa-instagram"></i></a>
-                <a class="social-link" href="https://www.pinterest.com/kellyv91/"><i class="fab fa-pinterest-p"></i></a>
-                <a class="social-link"><i class="fab fa-snapchat-ghost"></i></a>
-            </span>
-        </div>
+        
+        {{#bs-navbar class="app-navbar" type=type backgroundColor=bg collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+            <div class="navbar-header">
+                {{navbar.toggle}} MENU
+            </div>
+            {{#navbar.content}} 
+                {{#navbar.nav as |nav|}} 
+                    {{#nav.item}}
+                        {{#nav.link-to "home" class="navbar-link"}}HOME{{/nav.link-to}}
+                    {{/nav.item}} 
+                    {{#nav.item}}
+                        {{#nav.link-to "about" class="navbar-link"}}ABOUT{{/nav.link-to}}
+                    {{/nav.item}} 
+                    {{#nav.item}}
+                        {{#nav.link-to "fashion" class="navbar-link"}}FASHION{{/nav.link-to}}
+                    {{/nav.item}}
+                    {{#nav.item}}
+                        {{#nav.link-to "decor" class="navbar-link"}}DECOR{{/nav.link-to}}
+                    {{/nav.item}} 
+                    {{#nav.item}}
+                        {{#nav.link-to "home" class="navbar-link"}}SAY HELLO!{{/nav.link-to}}
+                    {{/nav.item}}
+                {{/navbar.nav}} 
+            {{/navbar.content}} 
+        {{/bs-navbar}}
+
+        
     </div>
     {{outlet}}
     <div class="app-footer">
