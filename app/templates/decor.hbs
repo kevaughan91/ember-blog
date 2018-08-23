@@ -1,1 +1,13 @@
-{{outlet}}
+
+
+<div class="container">
+    <div class="fashion--title">Shop my favorite home decor picks!</div>
+    <div class="fashion--subtitle">Click an image to view details on the outfit + accessories.</div>
+    {{outlet}}
+    <div class="row fashion--image-list-container">
+        <div class="">{{#link-to "decor.view" "1"}}<img class="fashion--image" src="/assets/images/fashion1.jpg">{{/link-to}}</div>
+        <div class="">{{#link-to "decor.view" "2"}}<img class="fashion--image" src="/assets/images/fashion2.jpg">{{/link-to}}</div>
+        <div class=""><img class="fashion--image" src="/assets/images/fashion3.jpg"></div>
+        <div class=""><img class="fashion--image" src="/assets/images/fashion4.jpg"></div>
+    </div>
+</div>

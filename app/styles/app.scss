@@ -270,3 +270,19 @@ body {
         padding-bottom: 30px;
     }
 }
+
+.decor {
+    &-picks {
+        border: 2px solid #dfede9;
+        border-radius: 2px;
+        a {
+            color: #b0cec7;
+            text-decoration:underline;
+        }
+    }
+    &--title {
+        text-transform: uppercase;
+        font-weight:300;
+        font-size:16px;
+    }
+}
