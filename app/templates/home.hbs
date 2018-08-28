@@ -1,12 +1,71 @@
 <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{#each model as |post|}}
+    <div class="blog-posts">
+
+        <div class="row post-container">
+            <div class="col-md-4 blog-posts--left-side">
+                <div class="image-container">
+                    {{#link-to "post" post.id}}
+                    <img class="pointer" width=100% src="/assets/images/{{post.coverphoto}}.jpg"> 
+                    {{/link-to}}
+                </div>
+            </div>
+            <div class="col-md-7 blog-posts--right-side">
+                <div class="blog-posts--content">
+                    <div class="timeline">
+                        {{post.date}}<span class="dash">-</span>{{post.category}}
+                    </div>
+                    <div class="title pointer">
+                        {{post.title}}
+                    </div>
+                    <div class="article" innerHTML={{truncate-text post.content limit=350}}>
+                    </div>
+                    <div class="see-more pointer">
+                        <a> see full post </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="row">
         {{#each model as |post|}}
-            <div class="col-md-3 blog-post">
-                {{#link-to "post" post.id}}
-                    <div class="overlay"></div>
-                    <img class="blog-image" src="/assets/images/{{post.coverphoto}}.jpg">
-                {{/link-to}}
-            </div>
+        <div class="col-md-3 blog-post">
+            {{#link-to "post" post.id}}
+            <div class="overlay"></div>
+            <img class="blog-image" src="/assets/images/{{post.coverphoto}}.jpg"> {{/link-to}}
+        </div>
         {{/each}}
     </div>
 </div>

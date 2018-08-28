@@ -23,14 +23,17 @@ app.get('/post/:id', function (req, res) {
   return res.json({"data":{"type": "post", "id":"12312342", "date":"asdf", "post-id":1, "title":"asdf", "condensedtitle":"gsdhe", "content":"adsfag", "coverphoto":"aheteh" }});
 });
 
+// for database
+// app.get('/posts', function (req, res) {
+//    const query = 'SELECT * FROM posts';
+//    queryDatabase(query ,function(err,data){
+//     console.log(data);
+//     return res.json(data);
+//   });
+// });
+
 app.get('/posts', function (req, res) {
-    //return res.json({data:{ "type": "post", "id":"12312342", "post_id":1, "title":"asdf", "condensedtitle":"gsdhe", "content":"adsfag", "coverphoto":"aheteh" }});
-   const query = 'SELECT * FROM posts';
-  queryDatabase(query ,function(err,data){
-    console.log(data);
-    return res.json(data);
-  });
-    //return res.json(postsObject);
+  return res.json(postsObject);
 });
 
 app.get('*', function(req, res) {

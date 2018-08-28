@@ -6,5 +6,6 @@ export default DS.Model.extend({
     title:  DS.attr('string'),
     condensedtitle:  DS.attr('string'),
     content: DS.attr('string'),
-    coverphoto: DS.attr('string')
+    coverphoto: DS.attr('string'), 
+    category: DS.attr('string')
 });
