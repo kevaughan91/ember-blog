@@ -13,7 +13,7 @@
         
         {{#bs-navbar class="app-navbar" type=type backgroundColor=bg collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
             <div class="navbar-header">
-                {{navbar.toggle}} MENU
+                {{navbar.toggle}}
             </div>
             {{#navbar.content}} 
                 {{#navbar.nav as |nav|}} 
@@ -32,6 +32,21 @@
                     {{#nav.item}}
                         {{#nav.link-to "home" class="navbar-link"}}SAY HELLO!{{/nav.link-to}}
                     {{/nav.item}}
+                    {{#nav.item}}
+                        <a class="social-link" href="mailto:kvaughan584@gmail.com"><i class="far fa-envelope"></i></a>
+                    {{/nav.item}}
+                    {{#nav.item}}
+                        <a class="social-link" href="https://www.facebook.com/kellyvaughan91"><i class="fab fa-facebook-f"></i></a>
+                    {{/nav.item}}
+                    {{#nav.item}}
+                        <a class="social-link" href="https://www.instagram.com/kelly.rainwater/?hl=en"><i class="fab fa-instagram"></i></a>
+                    {{/nav.item}}
+                    {{#nav.item}}
+                        <a class="social-link" href="https://www.pinterest.com/kellyv91/"><i class="fab fa-pinterest-p"></i></a>
+                    {{/nav.item}}
+                    {{#nav.item}}
+                        <a class="social-link"><i class="fab fa-snapchat-ghost"></i></a>
+                    {{/nav.item}}
                 {{/navbar.nav}} 
             {{/navbar.content}} 
         {{/bs-navbar}}
@@ -39,8 +54,15 @@
         
     </div>
     {{outlet}}
-    <div class="app-footer">
-        <span>Kelly Rainwater</span>
-        <span>kvaughan584@gmail.com</span>
+ 
+</div>
+<div class="app-footer">
+    <div class="app-footer--bottom-bar">
+        <div class="container">
+            <span>Trend & Tonic</span><span>&#183;</span>
+            <span>Kelly Vaughan</span><span>&#183;</span>
+            <span>kvaughan584@gmail.com</span>
+        </div>
     </div>
 </div>
+

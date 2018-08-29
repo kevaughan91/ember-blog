@@ -7,9 +7,11 @@ export function truncateText(params, hash) {
 
   
   if (value !== undefined) {
-    
+
+
     out = value.substr(0, len);
 
+    out = out.replace(/<img/g, "r");
     if (value.length > len) {
       out += '...';
     }

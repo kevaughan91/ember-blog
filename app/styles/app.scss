@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700');
+//font-family: 'Josefin Sans', sans-serif
 @import url('https://fonts.googleapis.com/css?family=Kristi');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 //font-family: 'Poiret One', cursive;
@@ -8,8 +9,11 @@
 //font-family: 'Waiting for the Sunrise', cursive;
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 //font-family: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+// font-family: 'Raleway', sans-serif;
 @import "ember-bootstrap/bootstrap";
  
+$mainfont: 'Josefin Sans', sans-serif;
 $pink: #efe3e5;
 $pinkamp : #d8bdbd;
 $pinkhover: #a97575;
@@ -23,7 +27,7 @@ $tealhover: #7fa299;
 /*#e6d4d5;*/
  
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: $mainfont;
     color: $greyfont;
 }
 
@@ -131,11 +135,6 @@ body {
             width:100%;
         }
     }
-    &-footer {
-        border-top: 1px solid #d0d0d0;
-        margin: 4rem 20% 0;
-        padding-bottom: 4rem;
-    }
 }
  
 
@@ -175,11 +174,11 @@ body {
     margin-right: 30px;
     &--title {
         text-transform: uppercase;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: $mainfont;
         font-size: 1.9rem;
         line-height: 1;
         font-weight: 300;
-        padding: 20px 0 8px;
+        padding: 20px 15px 8px;
         letter-spacing: 1px;
         text-align: center;
     }
@@ -257,6 +256,11 @@ body {
     &-link {
         width: 100%;
     }
+    .links-container {
+        border: 1px solid #d0d0d0;
+        border-radius: 2px;
+        padding:20px;
+    }
 }
 
 .about {
@@ -306,127 +310,93 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .blog-posts {
-    margin: 120px 0 120px 20px;
-
+    padding-bottom:4em;
+    margin-right:40px;
+    .image-container {
+        overflow:hidden;
+    }
     &--left-side {
-        border: solid #b1b0ae;
-        border-width: 1px 0 1px 1px;
         padding:0;
     }
     &--right-side {
-        border: solid #b1b0ae;
-        border-width: 1px 1px 1px 0;
-        height:352px;
-        padding:45px;
+        padding:0 65px;
     }
     &--content {
         height: 100%;
-        border-bottom: 1px solid #b1b0ae;
+        text-align:center;
         .title {
-            font-size: 26px;
-            color: #6b6b6a;
-            font-family: 'Josefin Sans', sans-serif;
-            margin-bottom: 15px;
+            font-size: 23px;
+            color: #353535;
+            font-family: $mainfont;
+            padding-top: 10px;
+            padding-bottom: 18px;
             line-height: 33px;
             font-weight: 300;
             text-transform:uppercase;
             &:hover {
-                color: #9db796;
+                color: #9fc3b9;
             }
         }
-        .timeline {
-            font-size: 12px;
-            color: #6b6b6a;
-            line-height: 1em;
-            padding-bottom: 25px;
-            font-weight:300;
-            font-family: 'Lato', sans-serif;
-            text-transform:uppercase;
-        }
         .article {
-            font-size: 16px;
-            font-family: 'Lato', sans-serif;
             font-weight: 300;
-            line-height: 1.75em;
+            color: #353535;
+            font-size: 16px;
+            line-height: 24px;
         }
+    }
+    &--line-heading {
+        width: 80%;
+        text-align: center;
+        font-size: .75rem;
+        font-weight: 300;
+        border-bottom: 1px solid #353535;
+        line-height: 0.01em;
+        margin: 10px 10% 20px 10%;
+    }
+    &--line-heading span {
+        background: #fff;
+        position: relative;
+        top: 2px;
+        color: #353535;
+        padding: 0 17px;
+        text-transform: uppercase;
+    }
+    button.full-post {
+        background-color: #353535;
+        color: white;
+        font-weight: 300;
+        font-size: 12px;
+        border: none;
+        padding: 9px;
+        text-transform: uppercase;
+        font-family: $mainfont;
     }
     .post {
         padding:15px;
     }
 }
 
-
-.see-more {
-    font-size: 17px;
-    text-align: right;
-    margin: 20px;
+.flex-center-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // height: 400px;
 }
 
-.see-more a {
-    color: #9db796;
-    text-decoration:none;
-}
 
-.pointer {
-    cursor:pointer;
-}
-
-.dash{
-    padding: 0 4px;
-}
-
-.blog-posts .image-container {
-    height:350px;
-    overflow:hidden;
-}
-.blog-posts .post-date .day {
-    font-size: 90px;
-    line-height: 73px;
-    margin-top: 5px;
-    color: #bbd8d0;
-}
-
-.blog-posts .post-date p {
-    color: #8e8c8a;
-    font-weight: 400;
-    font-size: 1.5em;
-    line-height: 21px;
-    margin-top: 6px;
-    letter-spacing: 4px;
-}
-
-.blog-posts .row {
-    margin: 85px -15px;
-}
-
-.blog-posts .col-md-10 {
-    border: 1px solid #8e8c8a;
-    height:700px;
+.app-footer {
+    &--bottom-bar {
+        padding: .8em;
+        background-color: #dfede9;
+        span {
+            text-transform: uppercase;
+            font-family: $mainfont;
+            padding: 0 .4rem !important;
+            color: #353535;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+    }
 }
