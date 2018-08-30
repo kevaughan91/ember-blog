@@ -10,10 +10,21 @@
         <div class="app-header--title">trend<span class="app-header--ampersand">&</span>tonic</div>
         <div class="app-header--subtitle">A Life + Style Blog by Kelly Rainwater</div>
         
-        {{#bs-navbar class="app-navbar" type=type backgroundColor=bg collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
-            <div class="navbar-header">
-                {{navbar.toggle}}
+        {{#bs-navbar class="app-navbar" as |navbar|}}
+            <div class="navbar-header web-hide">
+                <div class="social-links">
+                     <a class="social-link" href="mailto:kvaughan584@gmail.com"><i class="far fa-envelope"></i></a>
+                        <a class="social-link" href="https://www.facebook.com/kellyvaughan91"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link" href="https://www.instagram.com/kelly.rainwater/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link" href="https://www.pinterest.com/kellyv91/"><i class="fab fa-pinterest-p"></i></a>
+                        <a class="social-link"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
+                   <div class="toggle">
+                        {{navbar.toggle}}
+                   </div>
+                
             </div>
+            
             {{#navbar.content}} 
                 {{#navbar.nav as |nav|}} 
                     {{#nav.item}}
@@ -32,19 +43,19 @@
                         {{#nav.link-to "home" class="navbar-link"}}SAY HELLO!{{/nav.link-to}}
                     {{/nav.item}}
                     {{#nav.item}}
-                        <a class="social-link" href="mailto:kvaughan584@gmail.com"><i class="far fa-envelope"></i></a>
+                        <a class="social-link mobile-hide" href="mailto:kvaughan584@gmail.com"><i class="far fa-envelope"></i></a>
                     {{/nav.item}}
                     {{#nav.item}}
-                        <a class="social-link" href="https://www.facebook.com/kellyvaughan91"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link mobile-hide" href="https://www.facebook.com/kellyvaughan91"><i class="fab fa-facebook-f"></i></a>
                     {{/nav.item}}
                     {{#nav.item}}
-                        <a class="social-link" href="https://www.instagram.com/kelly.rainwater/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link mobile-hide" href="https://www.instagram.com/kelly.rainwater/?hl=en"><i class="fab fa-instagram"></i></a>
                     {{/nav.item}}
                     {{#nav.item}}
-                        <a class="social-link" href="https://www.pinterest.com/kellyv91/"><i class="fab fa-pinterest-p"></i></a>
+                        <a class="social-link mobile-hide" href="https://www.pinterest.com/kellyv91/"><i class="fab fa-pinterest-p"></i></a>
                     {{/nav.item}}
                     {{#nav.item}}
-                        <a class="social-link"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a class="social-link mobile-hide"><i class="fab fa-snapchat-ghost"></i></a>
                     {{/nav.item}}
                 {{/navbar.nav}} 
             {{/navbar.content}} 

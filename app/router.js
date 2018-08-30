@@ -17,6 +17,8 @@ Router.map(function() {
   this.route('decor', function() {
     this.route('view', { path: '/:id' });
   });
+  this.route('home', { path: '/' });
+  this.route('404', { path: '/*path'});
 });
 
 export default Router;
