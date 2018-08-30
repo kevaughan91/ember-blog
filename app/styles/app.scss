@@ -34,18 +34,16 @@ body {
 .center {
     text-align:center;
 }
-.show-in-mobile {
-    display:none !important;
-    @media (max-width: 600px) {
-        display:inline-block !important;
+
+@media (max-width: 600px) {
+    .mobile-hide { 
+        display:none !important;
+    }
+    .offset-1 {
+        margin-left:0;
     }
 }
 
-.hide-in-mobile {
-    @media (max-width: 600px) {
-        display:none !important;
-    }
-}
 
 .navbar-light .navbar-nav .nav-link {
     color:#353535;
@@ -230,6 +228,10 @@ body {
         font-size: 2em;
         font-weight: 300;
         text-align: center;
+        @media (max-width:600px){
+            padding-bottom: .5em;
+            line-height: 1.3em;
+        }
     }
     &--subtitle {
         text-align: center;
@@ -240,8 +242,11 @@ body {
     }
     &--image {
         padding: 5px;
-        height: 350px;
-        &:hover {
+        width: 100%;
+        @media (max-width:600px){
+            padding: 0 0 25px 0;
+        }
+        &:hover { 
             opacity:.4;
         }
     }
@@ -260,6 +265,15 @@ body {
         border: 1px solid #d0d0d0;
         border-radius: 2px;
         padding:20px;
+        @media (max-width:600px){
+            margin: 1.5em 1em;
+            display: flex;
+            flex-wrap: wrap;
+            .link {
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%;
+            }
+        }
     }
 }
 
@@ -283,6 +297,9 @@ body {
     &--picks {
         border: 1px solid #d0d0d0;
         border-radius: 2px;
+        @media (max-width:600px){
+            margin: 0px 12px;
+        }
         a {
             color: #b0cec7;
             text-decoration:underline;
@@ -290,6 +307,9 @@ body {
     }
     &--image {
         padding: 0 20px 20px;
+        @media (max-width:600px){
+            padding: 0 0 25px 0;
+        }
         width:100%;
     }
     &--title {
@@ -313,6 +333,9 @@ body {
 .blog-posts {
     padding-bottom:4em;
     margin-right:40px;
+    @media (max-width: 600px) {
+        margin:0 1em;
+    }
     .image-container {
         overflow:hidden;
     }
@@ -321,8 +344,14 @@ body {
     }
     &--right-side {
         padding:0 65px;
+        @media (max-width: 600px) {
+            padding:0;
+        }
     }
     &--content {
+        @media (max-width: 600px) {
+            padding-top: 18px;
+        }
         height: 100%;
         text-align:center;
         .title {
@@ -334,6 +363,9 @@ body {
             line-height: 33px;
             font-weight: 300;
             text-transform:uppercase;
+            @media (max-width: 600px) {
+                padding-bottom: 12px;
+            }
             &:hover {
                 color: #9fc3b9;
             }
