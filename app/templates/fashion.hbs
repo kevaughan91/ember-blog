@@ -7,7 +7,7 @@
     {{outlet}}
     <div class="row fashion--image-list-container">
         {{#each model as |fashion|}}
-            <div class="col-md-4">{{#link-to "fashion.view" fashion.id}}<img class="fashion--image" src="/assets/images/{{fashion.image}}">{{/link-to}}</div>
+            <div class="col-md-3">{{#link-to "fashion.view" fashion.id}}<img class="fashion--image" src="/assets/images/{{fashion.image}}">{{/link-to}}</div>
         {{/each}}
     </div>
 </div>
