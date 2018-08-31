@@ -6,9 +6,8 @@
     <div class="fashion--subtitle">Click an image to view details on the outfit + accessories.</div>
     {{outlet}}
     <div class="row fashion--image-list-container">
-        <div class="col-md-4">{{#link-to "fashion.view" "1"}}<img class="fashion--image" src="/assets/images/fashion1.jpg">{{/link-to}}</div>
-        <div class="col-md-4"><img class="fashion--image" src="/assets/images/fashion2.jpg"></div>
-        <div class="col-md-4"><img class="fashion--image" src="/assets/images/fashion3.jpg"></div>
-        <div class="col-md-4"><img class="fashion--image" src="/assets/images/fashion4.jpg"></div>
+        {{#each model as |fashion|}}
+            <div class="col-md-4">{{#link-to "fashion.view" fashion.id}}<img class="fashion--image" src="/assets/images/{{fashion.image}}">{{/link-to}}</div>
+        {{/each}}
     </div>
 </div>
