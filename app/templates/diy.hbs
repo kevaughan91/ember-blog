@@ -1,0 +1,27 @@
+<div class="container">
+    {{outlet}}
+    <div class="fashion--title">How to DIY on some current trends for way less than in the stores!</div>
+    <div class="fashion--subtitle">Click on a post to see step by step instructions on how I recreated some of my favorite design trends.</div>
+    <div class="row fashion--image-list-container">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="diy--title">How to make your own lettered sign</div>
+            <div class="diy--border"></div>
+            {{#link-to "diy.view" "lettered-sign"}}
+                <img class="fashion--image" src="/assets/images/diy1.jpg">
+            {{/link-to}}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row fashion--image-list-container">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="diy--title">Hanging leaf frames</div>
+            <div class="diy--border"></div>
+            {{#link-to "diy.view" "leaf-frames"}}
+                <img class="fashion--image" src="/assets/images/diy2.jpg">
+            {{/link-to}}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>

@@ -11,13 +11,16 @@ Router.map(function() {
   this.route('post', { path: '/view/:id' })
   this.route('about');
   this.route('contact');
+  this.route('home', { path: '/' });
   this.route('fashion', function() {
     this.route('view', { path: '/:id' });
   });
   this.route('decor', function() {
     this.route('view', { path: '/:id' });
   });
-  this.route('home', { path: '/' });
+  this.route('diy', function() {
+    this.route('view', { path: '/:id' });
+  });
   this.route('404', { path: '/*path'});
 });
 
