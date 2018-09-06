@@ -380,20 +380,42 @@ body {
 }
 
 .contact {
+    &--title {
+        padding-bottom:1.2em;
+    }
     &--email {
         background-color:#eee;
         margin-right:3em; 
         border-radius:2px;
         padding: 1.5em 4em;
+        @media (max-width: 600px) {
+            margin-right:0;
+            padding: 1.1em 1.1em;
+        }
     }
     &--inner {
+        @media (max-width: 600px) {
+            padding-top:1.5em;
+        }
         border: 10px solid #f5f5f5;
         background-color: white;
         text-align: center;
         color: #353535;
         letter-spacing: 1px;
         font-weight: 300;
+        padding: 3em 0;
         text-transform: uppercase;
+        input,textarea {
+            @media (max-width: 600px) {
+                width: 80%;
+                border: 1px solid #393939;
+            }
+        }
+    }
+    &--input-title {
+        font-size: 12px;
+        font-weight: 500;
+        color: #a2a2a2;
     }
 }
 
@@ -498,7 +520,14 @@ body {
     // height: 400px;
 }
 
-
+.projects {
+    &--img-cont {
+        text-align:center;
+    }
+    &--image {
+        width:60% !important;
+    }
+}
 .app-footer {
     &--bottom-bar {
         padding: .8em;
